@@ -1,0 +1,11 @@
+create table smartmemberinfo(
+id varchar2(20),
+pwd varchar2(20),
+name varchar2(20),
+addrFirst varchar2(80),
+addrSecond varchar2(80),
+tel varchar2(20),
+birth varchar2(20),
+joindate date default sysdate,
+PRIMARY KEY (id)
+);

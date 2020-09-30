@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+	<mapper namespace="com.lab.mybatis.filesave.filesave">
+	
+	<!-- 파일 내용 저장 -->
+	<insert id="filesave" parameterType="fdto">
+	insert into FILESAVE (id,name,imagsize,savetime,savename,filetitle) values(#{id},#{name},#{imagsize},#{savetime},#{savename},#{filetitle})
+	</insert>	
+	
+	<!-- 전체 파일 검색 -->
+	<select id="allfileview" resultType="fdto">
+	select * from FILESAVE
+	</select>
+	
+	<!-- 이미지 명으로 검색 -->
+	<select id="pop" parameterType="String" resultType="fdto">
+	select * from FILESAVE where savename=#{savename}
+	</select>
+	
+	<!-- 이미지명으로 검색하여 삭제 -->
+	<delete id="filedel" parameterType="String">
+	delete from FILESAVE where savename=#{savename}
+	</delete>
+	</mapper>

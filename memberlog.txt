@@ -1,0 +1,6 @@
+create table memberlog(
+id varchar2(20),
+name varchar2(20),
+jointime varchar2(80),
+outtime varchar2(80)
+);
