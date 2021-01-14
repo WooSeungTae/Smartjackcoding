@@ -77,6 +77,7 @@
 	<div align="right">
 	<c:if test="${sessionId==savename.id }"><input id='viewbutton' type="button" value ="삭제" onclick="delfucn()" ></c:if>  
 	<input id='viewbutton' type="button" value ="닫기" onclick="window.close()">
+	확인
 	</div>
 	</div>
 </body>
